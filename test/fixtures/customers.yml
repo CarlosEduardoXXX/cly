@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cpf: 1
+  nickname: MyString
+
+two:
+  cpf: 1
+  nickname: MyString
