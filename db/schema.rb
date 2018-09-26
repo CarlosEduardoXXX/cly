@@ -14,9 +14,9 @@ ActiveRecord::Schema.define(version: 20180919232239) do
 
   create_table "companies", force: :cascade do |t|
     t.integer "person_id"
-    t.integer "cnpj"
+    t.string "cnpj"
     t.string "nickname"
-    t.string "descrition"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["person_id"], name: "index_companies_on_person_id"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20180919232239) do
 
   create_table "customers", force: :cascade do |t|
     t.integer "person_id"
-    t.integer "cpf"
+    t.string "cpf"
     t.string "nickname"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
