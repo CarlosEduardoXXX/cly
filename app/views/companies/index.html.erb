@@ -1,0 +1,22 @@
+<h1>Listando Empresas</h1>
+
+<table>
+  <tr>
+    <th>Cnpj</th>
+    <th>Apelido</th>
+    <th>Descrição</th>
+
+    <th></th>
+  </tr>
+
+  <% @companies.each do |c| %>
+    <tr>
+      <td><%= c.person.name %></td>
+      <td><%= c.cnpj %></td>
+      <td><%= c.nickname %></td>
+      <td><%= c.description %></td>
+
+      <td><%= link_to 'Show', companies_path(c) %></td>
+    </tr>
+  <% end %>
+</table>

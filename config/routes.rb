@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'companys/index'
+  get 'companies/index'
 
-  resources :people, :companys
+  resources :customers, :companies
 
-  root 'companys#index'
+  root 'companies#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

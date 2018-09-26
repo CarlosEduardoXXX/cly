@@ -12,4 +12,4 @@
 
 customers = Customer.create({"person"=>people, "cpf"=>"33804600875", "nickname"=>"kadu"})
 
-companies = Company.create({"person"=>people2, "cnpj"=>"33804600875", "nickname"=>"barzinho", "description"=>"bardoze"})
+companies = Companie.create({"person"=>people2, "cnpj"=>"33804600875", "nickname"=>"barzinho", "description"=>"bardoze"})
