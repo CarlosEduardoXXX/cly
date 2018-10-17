@@ -1,12 +1,17 @@
-<%= form_with scope: :customer, local: true do |form| %>
+<%= form_with(model: @customer, local: true) do |form| %>
   <p>
     <%= form.label :name %><br>
-    <%= form.text_field :@customer.person.name %>
+    <%= form.text_field :person_id %>
   </p>
 
   <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.label :cpf %><br>
+    <%= form.text_field :cpf %>
+  </p>
+
+  <p>
+    <%= form.label :nickname %><br>
+    <%= form.text_area :nickname %>
   </p>
 
   <p>
