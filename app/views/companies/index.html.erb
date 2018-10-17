@@ -2,21 +2,28 @@
 
 <table>
   <tr>
+    <th>Empresa</th>
     <th>Cnpj</th>
     <th>Apelido</th>
-    <th>Descrição</th>
 
     <th></th>
   </tr>
 
   <% @companies.each do |c| %>
     <tr>
-      <td><%= c.person.name %></td>
+      <td><%= c.person.name %></td><br/>
       <td><%= c.cnpj %></td>
       <td><%= c.nickname %></td>
-      <td><%= c.description %></td>
 
-      <td><%= link_to 'Show', companies_path(c) %></td>
+      <td><%= link_to 'Mostrar Empresa', company_path(c) %></td>
+
     </tr>
-  <% end %>
+
+      <td><%= link_to 'Criar Empresa', new_company_path(c) %></td>
+
+
+     <% end %>
 </table>
+
+
+

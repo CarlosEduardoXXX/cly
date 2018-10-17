@@ -1,0 +1,20 @@
+<%= form_with scope: :customer, local: true, url: customers_path do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :nickname %><br>
+    <%= form.text_area :nickname %>
+  </p>
+
+  <p>
+    <%= form.label :cpf %><br>
+    <%= form.text_area :cpf %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

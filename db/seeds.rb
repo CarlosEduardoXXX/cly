@@ -13,3 +13,5 @@
 customers = Customer.create({"person"=>people, "cpf"=>"33804600875", "nickname"=>"kadu"})
 
 companies = Companie.create({"person"=>people2, "cnpj"=>"33804600875", "nickname"=>"barzinho", "description"=>"bardoze"})
+
+#Customer.create({"person"=>{"person.name"=>"Carlos2"}, "cpf"=>"33804600875", "nickname"=>"kadu"})
