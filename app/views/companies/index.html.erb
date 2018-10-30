@@ -6,7 +6,9 @@
     <th>Cnpj</th>
     <th>Apelido</th>
 
+
     <th></th>
+
   </tr>
 
   <% @companies.each do |c| %>
@@ -16,14 +18,17 @@
       <td><%= c.nickname %></td>
 
       <td><%= link_to 'Mostrar Empresa', company_path(c) %></td>
+      <td><%= link_to 'Editar Empresa', edit_company_path(c) %></td>
+      <td><%= link_to 'Excluir Cliente', company_path(c), method: :delete, data: {confirm: 'Tem certeza que deseja deletar?'} %></td>
 
     </tr>
-
-      <td><%= link_to 'Criar Empresa', new_company_path(c) %></td>
 
 
      <% end %>
 </table>
 
+<br>
+
+     <td><%= link_to 'Criar Empresa', new_company_path %></td>
 
 

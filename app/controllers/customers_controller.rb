@@ -27,18 +27,28 @@ class CustomersController < ApplicationController
 
   def show
 
-  @customer = Customer.find(params[:id])
+    @customer = Customer.find(params[:id])
+
 
   end
 
   def edit
 
-  @customer = Customer.find(params[:id])
+    @customer = Customer.find(params[:id])
+
 
   end
 
   def update
 
+  end
+
+  def destroy
+
+    @customer = Customer.find(params[:id])
+    @customer.destroy
+
+    redirect_to customers_path
 
   end
 
@@ -46,7 +56,7 @@ class CustomersController < ApplicationController
 
   def param_customer
 
-  (params.require(:customer).permit(:name, :cpf, :nickname))
+    (params.require(:customer).permit(:name, :cpf, :nickname))
 
   end
 

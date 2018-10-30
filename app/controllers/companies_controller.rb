@@ -8,18 +8,22 @@ class CompaniesController < ApplicationController
 
   def new
 
-    #@companie = Companie.new
-
   end
 
   def create
 
-    @companie = Companie.new(param_companie)
+    @person = Person.new
+    @person.name = param_companie[:name]
 
-  @companie.save
-  redirect_to @companie
+    @companie = Companie.new
+    @companie.person = @person
+    @companie.cnpj = param_companie[:cnpj]
+    @companie.nickname = param_companie[:nickname]
+    @companie.save
+    redirect_to @companie
 
   end
+
 
   def show
 
@@ -27,11 +31,31 @@ class CompaniesController < ApplicationController
 
   end
 
+   def edit
+
+    @companie = Companie.find(params[:id])
+
+  end
+
+  def update
+
+
+  end
+
+  def destroy
+
+    @companie = Companie.find(params[:id])
+    @companie.destroy
+
+    redirect_to companies_path
+
+  end
+
   private
 
   def param_companie
 
-  (params.require(:companie).permit(:cnpj, :nickname))
+   (params.require(:companie).permit(:name, :cnpj, :nickname))
 
   end
 
