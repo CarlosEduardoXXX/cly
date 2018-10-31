@@ -39,7 +39,9 @@ class CompaniesController < ApplicationController
 
   def update
 
-
+    @companie = Companie.find(params[:id])
+    flash[:notice] = "#was successfully updated."
+    redirect_to company_path(@companie)
   end
 
   def destroy

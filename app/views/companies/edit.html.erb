@@ -1,0 +1,20 @@
+<%= form_with(model: @companie,  method: "put") do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :person_id %>
+  </p>
+
+  <p>
+    <%= form.label :cnpj %><br>
+    <%= form.text_field :cnpj %>
+  </p>
+
+  <p>
+    <%= form.label :nickname %><br>
+    <%= form.text_area :nickname %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

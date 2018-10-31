@@ -1,0 +1,20 @@
+<%= form_with scope: :companie, local: true, url: companies_path do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :nickname %><br>
+    <%= form.text_area :nickname %>
+  </p>
+
+  <p>
+    <%= form.label :cnpj %><br>
+    <%= form.text_area :cnpj %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

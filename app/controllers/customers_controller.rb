@@ -40,7 +40,9 @@ class CustomersController < ApplicationController
   end
 
   def update
-
+    @customer = Customer.find(params[:id])
+    flash[:notice] = "#{@movie.title} was successfully updated."
+    redirect_to customer_path(@customer)
   end
 
   def destroy
